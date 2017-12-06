@@ -12,8 +12,8 @@ type LumberjackHook struct {
   logger *lumberjack.Logger
 }
 
-// NewHook creates a new LumberjackHook
-func NewHook(logger *lumberjack.Logger) (*LumberjackHook, error) {
+// NewLumberjackHook creates a new LumberjackHook
+func NewLumberjackHook(logger *lumberjack.Logger) (*LumberjackHook, error) {
   if logger == nil {
     return nil, fmt.Errorf("Logger cannot be nil")
   }
