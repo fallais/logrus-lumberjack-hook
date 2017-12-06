@@ -2,3 +2,21 @@
 
 ## Usage
 
+```
+// Set the Lumberjack logger
+lumberjackLogger := &lumberjack.Logger{
+  Filename:   "/var/log/misc.log",
+  MaxSize:    10,
+  MaxBackups: 3,
+  MaxAge:     3,
+  LocalTime:  true,
+}
+
+// Add Syslog hook
+hook, err := logrus_lumberjack.NewLumberjackHook(lumberjackLogger)
+if err != nil {
+  logrus.Fatalln("Unable to add the Lumberjack hook :", err)
+} else {
+  logrus.AddHook(hook)
+}
+```
