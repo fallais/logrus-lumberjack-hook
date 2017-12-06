@@ -12,7 +12,7 @@ lumberjackLogger := &lumberjack.Logger{
   LocalTime:  true,
 }
 
-// Add Syslog hook
+// Add Lumberjack hook
 hook, err := logrus_lumberjack.NewLumberjackHook(lumberjackLogger)
 if err != nil {
   logrus.Fatalln("Unable to add the Lumberjack hook :", err)
