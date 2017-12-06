@@ -2,7 +2,7 @@
 
 ## Usage
 
-```
+```go
 // Set the Lumberjack logger
 lumberjackLogger := &lumberjack.Logger{
   Filename:   "/var/log/misc.log",
