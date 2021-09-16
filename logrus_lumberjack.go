@@ -43,6 +43,7 @@ func (hook *LumberjackHook) Fire(entry *logrus.Entry) error {
 // Levels returns the available logging levels
 func (hook *LumberjackHook) Levels() []logrus.Level {
   return []logrus.Level{
+    logrus.TraceLevel,
     logrus.DebugLevel,
     logrus.InfoLevel,
     logrus.WarnLevel,
